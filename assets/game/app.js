@@ -57,19 +57,16 @@ $(document).ready(function() {
     function assignAttacker(attacker) {
         switch (attacker) {
             case "data":
-
                 attackerDamage = starTrekGame.data.atk;
                 attackerHealth = starTrekGame.data.health;
                 console.log("data-attacker");
                 break;
             case "riker":
-
                 attackerDamage = starTrekGame.data.atk;
                 attackerHealth = starTrekGame.riker.health;
                 break;
                 console.log("riker-attacker");
             case "worf":
-
                 attackerDamage = starTrekGame.data.atk;
                 attackerHealth = starTrekGame.worf.health;
                 console.log("worf-attacker");
@@ -85,19 +82,16 @@ $(document).ready(function() {
     function assignDefender(defender) {
         switch (defender) {
             case "data":
-
                 defenderDamage = starTrekGame.data.atk;
                 defenderHealth = starTrekGame.data.health;
                 console.log("data-defender");
                 break;
             case "riker":
-
                 defenderDamage = starTrekGame.riker.atk;
                 defenderHealth = starTrekGame.riker.health;
                 console.log("riker-defender");
                 break;
             case "worf":
-                ;
                 defenderDamage = starTrekGame.worf.atk;
                 defenderHealth = starTrekGame.worf.health;
                 console.log("worf-defender");
