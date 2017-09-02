@@ -1,0 +1,49 @@
+body {
+	background-image: url("../images/starship-background.jpg");
+	width: 100%;
+	height: auto;
+	font-family: 'Press Start 2P', cursive;
+}
+
+#character-selection div {
+	float: left;
+}
+
+.attacker-wrapper {
+	float: left;
+}
+
+.defender-wrapper {
+	float: right;
+}
+
+.attack-button {
+	background-color: green;
+	border: none;
+	font-family: 'Press Start 2P', cursive;
+	color: black;
+	font-size: 24px;
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+	height: 60px;
+	margin: 5px 5px 5px;
+	clear: both;
+}
+
+.text-style {
+	color: #fff;
+	font-size: 30px
+}
+.character-style {
+	border: thick solid green;
+	padding: 15px;
+	text-align: center;
+	background-color: #fff;
+	margin: 5px 5px 5px 5px;
+}
+
+.character-style:hover {
+	cursor: pointer;
+	box-shadow: 5px 5px 5px rgba(0, 256, 0, 0.5);
+}
