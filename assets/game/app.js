@@ -75,8 +75,7 @@ $(document).ready(function() {
                 console.log("worf-attacker");
                 break;
             case "borg":
-
-                attackerDamage = starTrekGame.data.atk;
+                attackerDamage = starTrekGame.borg.atk;
                 attackerHealth = starTrekGame.borg.health;
                 console.log("borg-attacker");
         }
@@ -98,31 +97,36 @@ $(document).ready(function() {
                 console.log("riker-defender");
                 break;
             case "worf":
-;
+                ;
                 defenderDamage = starTrekGame.worf.atk;
                 defenderHealth = starTrekGame.worf.health;
                 console.log("worf-defender");
                 break;
             case "borg":
-
                 defenderDamage = starTrekGame.borg.atk;
                 defenderHealth = starTrekGame.borg.health;
                 console.log("borg-defender");
         }
     }
-    
+
     //math function for running the damage state
     function damageAssignment() {
         attackerHealth = attackerHealth - defenderDamage;
         defenderHealth = defenderHealth - (attackerDamage + attackerDamage);
+        $("data-health").html(starTrekGame.data.health);
+        $("riker-health").html(starTrekGame.worf.health);
+        $("worf-health").html(starTrekGame.data.health);
+        $("borg-health").html(starTrekGame.borg.health);
         console.log(attackerHealth, defenderHealth)
     }
-
-function arenaCheck() {
-    if (defenderHealth <= 0) {
-        $("defender-space:first-child").detach();
+    //this checks the state of the game when the current defender is dead
+    function arenaCheck() {
+        if (defenderHealth <= 0) {
+            $("defender-space:first-child").detach();
+            starTrekGame.arenaState.defChosen = false;
+            console.log(starTrekGame.arenaState.defChosen);
+        }
     }
-}
     //this holds effects when character divs are clicked on 
     //if no characters are selected then append the first character to the attacker position 
     //if the attacker is chosen the next character goes to the defender area   
@@ -151,8 +155,10 @@ function arenaCheck() {
 
             // the damage of the attacker and the defender is calculated
             damageAssignment(attackerDamage, attackerHealth, defenderDamage, defenderHealth);
+            
+            //dead defenders will be removed from the arena
+            arenaCheck();
         })
-
     })
 
     //s test to see properties of the game stat

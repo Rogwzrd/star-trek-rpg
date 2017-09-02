@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="assets/style/reset.css">
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 <link rel="stylesheet" href="assets/style/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="assets/game/app.js"></script>
 
@@ -10,39 +11,55 @@
     <title>Star trek Rpg</title>
 </head>
 
-<body>
-    <div class="arena">
-        <div id="attacker-wrapper">
-            <h1 class="text-style">Your Character</h1>
-            <div class="attacker-space"></div>
-        </div>
-        <div id="defender-wrapper">
-            <h1 class="text-style">Defender</h1>
-            <div class="defender-space"></div>
+<body class="container">
+    <div class="arena row">
+       <div class="col-xs-6">
+            <div id="attacker-wrapper">
+               <h1 class="text-style">Your Character</h1>
+               <div class="attacker-space"></div>
+           </div>
+       </div>
+        <div class="col-xs-6">
+            <div id="defender-wrapper">
+                <h1 class="text-style">Defender</h1>
+                <div class="defender-space"></div>
+            </div>
         </div>
         <button class="attack-button">attack</button>
     </div>
-    <h1 class="text-style">Character Selection</h1>
-    <div id="character-selection"> 
-        <div id="data-wrapper" class="character character-style data" value="data">
-            <p>Data</p>
-            <img height="150" width="200" src="assets/images/data-phaser.jpg" alt="data">
-            <p>hp: <span>x</span></p>
+   <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-style">Character Selection</h1>
         </div>
-        <div id="riker-wrapper" class="character character-style riker" value="riker">
-            <p>Riker</p>
-            <img height="150" width="200" src="assets/images/riker-phaser.jpg" alt="riker">
-            <p>hp: <span>x</span></p>
+   </div>
+    <div id="character-selection row"> 
+       <div class="col-xs-3">
+            <div id="data-wrapper" class="character character-style data" value="data">
+               <p>Data</p>
+               <img height="150" width="200" src="assets/images/data-phaser.jpg" alt="data">
+               <p>hp: <span class="data-health">x</span></p>
+           </div>
+       </div>
+       <div class="col-xs-3">
+            <div id="riker-wrapper" class="character character-style riker" value="riker">
+               <p>Riker</p>
+               <img height="150" width="200" src="assets/images/riker-phaser.jpg" alt="riker">
+               <p>hp: <span class="riker-health">x</span></p>
+           </div>
+       </div>
+        <div class="col-xs-3">
+            <div id="worf-wrapper" class="character character-style worf" value="worf">
+                <p>Worf</p>
+                <img height="150" width="200" src="assets/images/worf-attack.jpg" alt="worf">
+                <p>hp: <span class="worf-health">x</span></p>
+            </div>
         </div>
-        <div id="worf-wrapper" class="character character-style worf" value="worf">
-            <p>Worf</p>
-            <img height="150" width="200" src="assets/images/worf-attack.jpg" alt="worf">
-            <p>hp: <span>x</span></p>
-        </div>
-        <div id="borg-wrapper" class="character character-style borg" value="borg">
-            <p>Borg</p>
-            <img height="150 " width="200 " src="assets/images/borg-attack.jpg " alt="borg">
-            <p>hp: <span>x</span></p>
+        <div class="col-xs-3">
+            <div id="borg-wrapper" class="character character-style borg" value="borg">
+                <p>Borg</p>
+                <img height="150 " width="200 " src="assets/images/borg-attack.jpg " alt="borg">
+                <p>hp: <span class="borg-health">x</span></p>
+            </div>
         </div>
     </div>
 </body>

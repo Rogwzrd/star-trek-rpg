@@ -2,6 +2,7 @@ body {
 	background-image: url("../images/starship-background.jpg");
 	width: 100%;
 	height: auto;
+	text-align: center;
 	font-family: 'Press Start 2P', cursive;
 }
 
