@@ -113,16 +113,16 @@ $(document).ready(function() {
     function damageAssignment() {
         attackerHealth = attackerHealth - defenderDamage;
         defenderHealth = defenderHealth - (attackerDamage + attackerDamage);
-        $("data-health").html(starTrekGame.data.health);
-        $("riker-health").html(starTrekGame.worf.health);
-        $("worf-health").html(starTrekGame.data.health);
-        $("borg-health").html(starTrekGame.borg.health);
+        $(".data-health").html(starTrekGame.data.health);
+        $(".riker-health").html(starTrekGame.worf.health);
+        $(".worf-health").html(starTrekGame.data.health);
+        $(".borg-health").html(starTrekGame.borg.health);
         console.log(attackerHealth, defenderHealth)
     }
     //this checks the state of the game when the current defender is dead
     function arenaCheck() {
         if (defenderHealth <= 0) {
-            $("defender-space:first-child").detach();
+            $(".defender-space:first-child").detach();
             starTrekGame.arenaState.defChosen = false;
             console.log(starTrekGame.arenaState.defChosen);
         }
@@ -155,7 +155,7 @@ $(document).ready(function() {
 
             // the damage of the attacker and the defender is calculated
             damageAssignment(attackerDamage, attackerHealth, defenderDamage, defenderHealth);
-            
+
             //dead defenders will be removed from the arena
             arenaCheck();
         })
